@@ -23,8 +23,10 @@ describe('frontend App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+  it('should display welcome message', async() => {
+    await page.navigateTo();
+    await new Promise(resolve => setTimeout(resolve, 4000));
+    // expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toContain('Welcome to OpenTSDB')
   });
 });

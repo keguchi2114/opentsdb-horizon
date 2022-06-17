@@ -9,7 +9,7 @@
     "build": "ng build --prod --aot",
     "test": "ng test --watch=false --code-coverage && rm -rf ./node_modules/uws/*.node && rm -rf ./node_modules/node-sass/vendor/darwin-x64-57/binding.node && rm -rf ./node_modules/node-sass/vendor/linux-x64-57/binding.node",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "e2e": "npm run build && ng e2e --configuration=noserve",
     "build:horizon": "ng build horizon --prod --output-hashing=none && node build-single.js"
   },
   "private": true,

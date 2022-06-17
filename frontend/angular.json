@@ -168,6 +168,11 @@
           "options": {
             "protractorConfig": "./protractor.conf.js",
             "devServerTarget": "frontend:serve"
+          },
+          "configurations": {
+            "noserve": {
+              "devServerTarget": ""
+            }
           }
         },
         "lint": {
